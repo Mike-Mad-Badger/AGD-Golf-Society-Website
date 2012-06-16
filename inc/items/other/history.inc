@@ -1,0 +1,15 @@
+<div class="storyimage">
+	<a href="media/images/golfers_big.jpg" class="highslide" onclick="return hs.expand(this)">
+		<img src="media/images/golfers.jpg" alt="Golfers" title="Click to enlarge" height="215" width="287" />
+	</a>
+</div>
+<div class="highslide-caption">
+	Golfers
+</div>
+<h2>History</h2>
+<p>The AGD was formed when someone (name hidden to protect the guilty, we'll call him Fred for now), finally got fed up of being unable to gain an invite to the company sponsored golf day. So after several years of thinking about it and not doing anything Fred finally gathered together some likely suspects (names also hidden to protect the guilty) and suggested they get a little old golf society going, there was plenty of enthusiasm and the ball was rolling. This was late 2008 if memory serves, or perhaps New Year 2009, around then anyway.</p>
+<p>Now Fred hasn't always been brilliant at the 'doing end' of ideas, he's more an initiator and thankfully Barney took on the mantle of finding a course, organising the payment and all of the hard chores. Fred meanwhile decided to create an all singing, all dancing spreadsheet that could do what any golfer the world over does every time they play, tot up the total score - nothing like re-inventing the wheel as an excessively complex error ridden electronic device! The results of this electronic excess are linked as pdf files to most of the write-ups we produce for the days out (see the <a href="index.php?pagetype=results">results section</a>, the later the year the more charts, tables and stats the pdf contains!).</p>
+<p>Thanks to Barney the day evolved perfectly and the result was our first event, ably described in our <a href="index.php?pagetype=results&amp;season=spring&amp;year=2009">results section</a>.</p>
+<p>The spreadsheet has since taken on a life of its own and thanks to endless meddling with disasterous and comical results now produces statistics that any nerd would be proud of, it's almost a celebrated part of our days out just to see what crazy error Fred has introduuced with his infernal meddling - nothing like fixing things that aren't broken! And Barney has retired, justifiably, to a playing role whilst Hector has stepped into the fray to look after the money side of things and thankfully, most of the time anyway, Fred has done much more of the organising (with great help from Hector, it wouldn't happen without him), usually without too many mistakes, but it wouldn't be the same without at least a few creeping in just to keep everyone on their toes.</p>
+<p>The prizes we handed out on that first fine outing still exist and are much sought after, especially the inevitable fight to avoid the wooden spoon, adorned as it is with three treasured Donnay Pro V1's. You can see who's won what at each event in the <a href="index.php?pagetype=winners">Winners corner</a> including our two newer prizes, first introduced in late 2009.</p>
+<p>If you are interested in joining our merry band, then just <a href="index.php?pagetype=contact">get in touch</a>!</p>

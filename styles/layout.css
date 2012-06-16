@@ -1,0 +1,201 @@
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+Copyright (c) 2011- Mike Conroy. All rights reserved.
+=================================================================== */
+
+/* ================================================================ 
+This style sheet sets up a three column fluid width page with
+columns that have the same vertical height. It also provides for:
+(1) a header area with an image and e.g. the website title in the
+header area
+(2) a menu block between the header area and the main content area
+(3) finally a footer area is provided below the main content area
+=================================================================== */
+
+
+/* Set padding a margin to 0 globally so we know exactly where we are starting from */
+/* when altering specific elements or groups of elements */
+* {padding:0; margin:0;}
+
+/* Then we can set up standard font sizes, type face etc for the whole site */
+/* We also add some padding so that no content edge ever touches the viewport boundaries */
+body {
+	font-size:76%;
+	font-family:"trebuchet MS", verdana, arial, sans-serif;
+	background:#bcbcbc;
+	padding:10px;
+	word-wrap:break-word;
+}
+ 
+ /* The #widthcontrol <div> manages the fluidity of the pages ans since we have three columns */
+ /* the min width stops all the content becoming excessively horizontally cramped */
+ /* the max width help on very very wide monitors */
+#widthcontrol {
+	min-width:700px;
+	max-width:1280px;
+	margin:0 auto;
+	/* we set relative positioning so that we can manage positioning of the major */
+	/* page elements out of order with their position in the html */
+	position: relative;
+}
+
+/* The #header <div> sets up the page header area and can be adjusted to include */
+/* images and whatever other styles are appropriate */
+#header {
+	background-image: url('images/header.jpg');
+	background-repeat: no-repeat;
+	height: 109px;
+	/* We set overflow hidden to so we don't end up with scroll bars, as the width of */
+	/* the <h1> will still cause them to be created even if there is nothing to see */
+	overflow:hidden;
+}
+#header img {
+	margin-top:-29px;
+}
+/* The h1 element in the #header <div> allows a heading to be placed within the */
+/* header area, above the image or coliur scheme chosen */
+#header h1 {
+	/* relative positioning means that we can set its position relative to the header area */
+	position:relative;	
+	/* z-index ensures it appears above the images etc. in the header, increase the value */
+	/* if it's a complex set of elements in the header */
+	z-index:1;
+	left:20px;
+	/* We set a right padding equal to the left positioning so that long text does not flow */
+	/* of the right edge of the screen, we also have set overflow: hidden on the header <div> */
+	/* so that the long <h1> doesn't cause scroll bars to be created */
+	padding-right:20px;
+	top:70px;
+	color: #ffa500;
+}
+
+/* The #menublock <div> is floated left but immediately set to 100% width so that it fills the width */
+/* of the #widthcontrol <div> */
+#menublock {
+	overflow:hidden;
+	float: left;
+	width: 100%;
+	background:#2e4b00;
+	border-top: 5px solid #bcbcbc;
+	border-bottom: 5px solid #bcbcbc;
+	padding: 0;
+}
+
+#container {
+	/* first we clear: left to move it directly below the #menublock <div> */
+	clear:left;
+	/* setting the overflow to hidden is needed to allow our 'trick' to make equal length columns */
+	/* work further down */
+	overflow:hidden;
+	border-bottom:2px solid #bcbcbc;
+	background: #bcbcbc;
+}
+
+/* the #left_sidebar <div> needs to be always on the left side of the main content area */
+#left_sidebar {
+	/* floating it left and ensuring it appears first after opening the #container <div> */
+	/* ensures it will always appear where we want it to */
+	float:left;
+	/* fixing a % width ensures we get the fluidity we want */
+	width:20%;
+	background: #99cc66;
+}
+/* the #left_sidebar <div> needs to be always on the left side of the main content area */
+#right_sidebar {
+	/* floating it right and ensuring it appears second after opening the #container <div> */
+	/* (and after the #left_sidebar <div> ensures it will always appear where we want it to */
+	float:right;
+	/* fixing a % width ensures we get the fluidity we want */
+	width:20%;
+	background:#99cc66;
+}
+
+/* the #content <div> needs to appear between the left and right sidebars and to fill the */
+/* the space between them */
+/* it also contains any further <div>'s we define to manage the appearance of elements of the */
+/* site content, such as newsflashes, stories / articles / adverts etc. */
+#content{
+	/* width is 100% minus the width of the two sidebars summed together minus the margin */
+	/* we apply to this element */
+	width:60%;
+	/* floating left and ensuring it appears after the #right_sidebar <div> in the html puts */
+	/* it inbetween the two sidebars as required */
+	float:left;
+	/* adding margin allows for separation between the sidebars and the main content area */
+	/* and if we set a background colour on the #container <div> then it will show through in this */
+	/* margin area providing visual separation of the three columns */
+	margin-left:0;
+	margin-right:0;
+}
+
+/* The newsflash is a specific <div> setup to allow us to have important items (stories etc.) */
+/* appropriately highlighted */
+/* the message <div> is just another version of the newsflash */
+#content div.newsflash, #content div.message {
+	/* important stories should fill the width provided by the content area */
+	width:100%;
+	overflow: hidden;
+}
+
+/* Since we can have floated elements in newsflashes and messages, they may be larger than the */
+/* accompanying text, therefore we need to ensure the spacing div stretches down and covers */
+/* everything, or we will get odd looking backgrounds */
+#content div.newsflash .spacing:after, #content div.message .spacing:after {
+	content: ".";  
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden; 
+}
+
+/* left item <div>'s allow a story to fill half the width of the content area, they are floated left */
+/* typically it would be followed by a right item <div>, though there may be some scenarios when this */
+/* wouldn't happen */
+#content div.left_item {
+	float:left;
+	width:50%;
+}
+/* right item <div>'s allow a story to fill half the width of the content area, they are floated right */
+/* no left_item is needed preceding it to make it appear as ecpected */
+#content div.right_item {
+	float:right;
+	width:50%;
+}
+/* full item <div>'s allow a story to fill the width of the content area */
+/* whatever precedes tjem they still appear in the right place and fill the width */
+#content div.full_item {
+	/* clear: both or float: left have the same effect */
+	/* However using clear: both causes the margins not to work */
+	float: left;
+	width:100%;
+}
+
+/* Since we can have floated elements in content items, they may be larger than the accompanying */
+/* text, therefore we need to ensure the spacing div stretches down and covers everything, or */
+/* we will get odd looking backgrounds */
+#content div.full_item .spacing:after, #content div.left_item .spacing:after, #content div.right_item .spacing:after {
+	content: ".";  
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden; 
+}
+
+/* All <div>'s inside the #container <div> (after the #menublock <div> and before the */
+/* #footer <div> require some spacing to ensure nice gaps between their edges and the */
+/* content, left side menus, stories, right side RSS feeds etc. */
+.spacing {padding:10px;}
+
+/* This is the code that makes all columns have the same height regardless of content */
+#left_sidebar, #content, #right_sidebar {
+	padding-bottom:32767px;
+	margin-bottom:-32767px;
+}
+ 
+/* the footer <div> is cleared left so it appears full page width below the content area */
+/* it should follow the closing </div> of the #content <div> so that it doesn't appear within */
+/* the main content area */
+#footer {
+	clear:both;
+}

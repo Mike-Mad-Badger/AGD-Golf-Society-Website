@@ -1,0 +1,132 @@
+﻿/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+Copyright (c) 2011 - Mike Conroy. All rights reserved.
+=================================================================== */
+
+#content div.scores {
+	/*  */
+	font-size: 115%;
+	background: #fff;
+	border: 1px solid #E78F08;
+	border-top: none;
+	padding: 10px;
+	clear: both;
+}
+
+#content div.scores * {
+	opacity: 1;
+}
+
+#content div.scores table {
+	width: 100%;
+	border: 2px solid #000;
+	border-collapse: collapse;
+	margin-bottom: 30px;
+}
+
+#content div.scores table td, #content div.scores table th {
+	/*  */
+	padding: 2px;
+	border: 1px solid #000;
+	border-collapse: collapse;
+	margin-bottom: 3px;
+}
+
+#content table.player {
+	/*  */
+	text-align: left;
+	background: #fff;
+}
+
+#content table.player tbody td{
+	/*  */
+	background: #686868;
+	color: #fff;
+	font-weight: bold;
+}
+
+#content table.player th.courseinfo, #content table.player td.courseinfo {
+	/*  */
+	text-align: center;
+}
+
+#content div.scores table.amscores, #content div.scores table.pmscores {
+	/*  */
+	text-align: center;
+}
+
+#content div.scores table.amscores caption, #content div.scores table.pmscores caption {
+	/*  */
+	border-top: 2px solid #000;
+	border-left: 2px solid #000;
+	border-right: 2px solid #000;
+	background: #7DBD3D;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+#content div.scores table.amscores thead, #content div.scores table.pmscores thead, #content div.scores table.player thead {
+	/*  */
+	border-bottom: 2px solid #000;
+	background: #99cc66;
+}
+
+#content div.scores table.amscores tfoot, #content div.scores table.pmscores tfoot {
+	/*  */
+	border-top: 2px solid #000;
+	background: #99cc66;
+	font-weight: bold;
+}
+
+#content div.scores table colgroup.holeinfo {
+	/*  */
+	background: #383838;
+}
+
+#content div.scores table colgroup.scoreinfo {
+	/*  */
+	background-color: #686868;
+}
+
+#content div.scores table.amscores tbody td, #content div.scores table.pmscores tbody  td {
+	/*  */
+	color: #fff;
+	font-weight: bold;
+}
+
+#content div.scores table tbody td.par {
+	/*  */
+	background-image: url('images/par.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#content div.scores table tbody td.eagle {
+	/*  */
+	background-image: url('images/eagle.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#content div.scores table tbody td.birdie {
+	/*  */
+	background-image: url('images/birdie.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#content div.scores table tbody td.bogey {
+	/*  */
+	background-image: url('images/bogey.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+#content div.scores table tbody td.dblbogey {
+	/*  */
+	background-image: url('images/dblbogey.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,62 @@
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+Copyright (c) 2011 - Mike Conroy. All rights reserved.
+=================================================================== */
+
+#content div.player_info {
+	/*  */
+	font-size: 115%;
+	background: #fff;
+	padding: 10px;
+	clear: both;
+}
+
+#content  table.player_table,#content  table.winners_table {
+	width: 100%;
+	border: 2px solid #000;
+	border-collapse: collapse;
+	margin-bottom: 30px;
+}
+
+#content table.player_table td, #content table.player_table th, #content table.winners_table td, #content table.winners_table th {
+	/*  */
+	padding: 2px;
+	border: 1px solid #000;
+	border-collapse: collapse;
+	margin-bottom: 3px;
+	text-align: center;
+}
+
+#content table.player_table td.player_name, #content table.player_table th.player_name {
+	text-align: left;
+}
+
+#content table.player_table thead th, #content table.winners_table thead th {
+	/*  */
+	border-bottom: 2px solid #000;
+	background: #99cc66;
+}
+
+#content table.player_table tfoot td, #content table.winners_table tfoot td {
+	/*  */
+	border-top: 2px solid #000;
+	background: #99cc66;
+	font-weight: bold;
+}
+
+#content table.player_table tbody td, #content table.winners_table tbody td {
+	/*  */
+	color: #fff;
+	font-weight: bold;
+}
+
+#content table.player_table colgroup.player, #content table.winners_table colgroup.player {
+	/*  */
+	background: #383838;
+}
+
+#content table.player_table colgroup.handicap, #content table.winners_table colgroup.handicap {
+	/*  */
+	background-color: #686868;
+}

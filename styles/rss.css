@@ -1,0 +1,72 @@
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+Copyright (c) 2011 - Mike Conroy. All rights reserved.
+=================================================================== */
+
+#rsstitle {
+	padding-top: 0;
+	display: block;
+	background-color: #7DBD3D;
+	color: #fff;
+	text-decoration: none;
+	border-style: solid none solid none;
+	border-color: #000;
+	border-width: 2px;
+}
+
+#rsstitle span {display: block; padding: 5px; font-size:1.4em; font-weight: bold;}
+
+div.rssitems span {display: block; font-size:1.2em; font-weight: bold;}
+
+#rsstitle:hover {
+	background-color: #5E8E2E;
+}
+
+#rssdesc {
+	padding-top: 5px;
+	padding-bottom: 15px;
+}
+
+.rssitems {
+	width: 100%;
+	margin-bottom: 1em;
+	background-color: #99CC66;
+}
+
+#right_sidebar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#right_sidebar ul li {
+	background-color: #cce5b2;
+	background-image: none;
+	border-style: solid none none none;
+	border-width: 2px;
+}
+
+#right_sidebar ul li a {
+	display: block;
+	background-color: #7DBD3D;
+	color: #fff;
+	text-decoration: none;
+	padding: 5px;
+}
+
+#right_sidebar ul li a:hover {
+	background-color: #5E8E2E;
+}
+
+#right_sidebar ul li p {
+	padding: 5px;
+	padding-bottom: 0px;
+}
+
+#right_sidebar ul li p.rssdates{
+	font-size:0.8em;
+	color: #4086aa;
+	padding-bottom: 10px;
+}

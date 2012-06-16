@@ -1,0 +1,128 @@
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+Copyright (c) 2009- Mike Conroy. All rights reserved.
+=================================================================== */
+
+/* ================================================================
+The first set of styles setup the top menu
+=================================================================== */
+#topnavbar {
+	height: 48px;
+	width: 100%;
+	float: left;
+	background: transparent;
+	z-index: 1;
+	padding:0 10px 0 10px;
+}
+.menu {
+	height:48px;
+	width: 100%;
+	position:relative;
+	margin: 0;
+	z-index:1000;
+}
+
+.menu ul li a {
+	display:block;
+	text-decoration:none;
+	text-align:center;
+	color:#fff;
+	font-weight:bold;
+	width:81px; 
+	height:42px;
+	border-bottom: 0;
+	background-image:url('images/green/center.png');
+	line-height:48px; 
+	overflow:hidden;
+	padding-left: 1px;
+}
+/* End Caps Styling */
+.menu ul .left_nosub, .menu ul .left_hassub {
+	background-image:url('images/green/left.png');
+	padding-left: 1px;
+	margin-right: -1px;
+}
+.menu ul .right_hassub, .menu ul .right_nosub {background-image:url('images/green/right.png');}
+.menu ul {padding:0; margin:0; list-style: none;}
+.menu ul li {float:left; position:relative;}
+.menu ul li ul {display: none;}
+
+/* Button ":hover" Styling */
+.menu ul li:hover a {color:#223601; background:url('images/green/center_hassub.png');}
+.menu ul li:hover ul {display:block; position:absolute; left:0; width:152px; margin: 0; padding: 0;}
+.menu ul li:hover ul li a.center_hassub {background:#6a3; color:#fff;}
+.menu ul li:hover ul li:hover a.center_hassub {background:#6fc; color:#544a3a;}
+.menu ul li:hover ul li ul {display: none;}
+
+.menu ul li:hover .left_nosub {color:#223601; background:url('images/green/left_nosub.png');}
+.menu ul li:hover .center_nosub {color:#223601; background:url('images/green/center_nosub.png');}
+.menu ul li:hover .right_hassub {color:#223601; background:url('images/green/right_hassub.png') ;}
+.menu ul li:hover .right_nosub {color:#223601; background:url('images/green/right_nosub.png') ;}
+
+/* DropDown Styling */
+.menu ul li:hover ul li a {background-image: none; display:block;height: 28px; line-height: 26px; color:#223601; width:142px; text-align:left; margin: 0; padding:0 0 0 11px;font-weight:normal;}
+.menu ul li:hover ul {
+	margin: 0 0 0 3px;
+	padding: 0;
+	background-image:url('images/green/dropdown.png');
+	background-repeat:no-repeat;
+	background-position:bottom left; 
+}
+
+/* DropDown Menus ":active" or "Selected" Styling */
+.menu ul li:hover ul .sub_active {
+	background-image:url('images/green/sub_active.png');
+	margin-right: 1px;
+}
+
+/* DropDown Menus ":hover" Styling */
+.menu ul li:hover ul li a:hover {color:#fff; background-image:url('images/green/sub_hover.png');}
+
+.menu ul li:hover ul li:hover ul {display:block; position:absolute; left:105px; top:0;}
+.menu ul li:hover ul li:hover ul.left {left:-105px;}
+
+/* ================================================================
+This second set of styles setup the menu down the left hand side
+=================================================================== */
+.leftmenu {
+	width: 100%;
+	margin-bottom: 1em;
+	background-color: #cce5b2;
+	color: #333;
+}
+#left_sidebar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+	border: none;
+}
+#left_sidebar ul li {
+	background-image: url('images/bullet-green.gif');
+	background-repeat: no-repeat;
+	background-position: 0px 8px;
+	padding-bottom: 5px;
+	padding-left: 19px;
+}
+#left_sidebar ul li a {
+	display: block;
+	padding: 5px 5px 5px 0.5em;
+	background-color: #7DBD3D;
+	color: #fff;
+	text-decoration: none;
+}
+html>body .leftmenu li a {
+	width: auto;
+}
+#left_sidebar ul li a:hover {
+	background-color: #5E8E2E;
+	color: #fff;
+}
+#left_sidebar ul li ul {
+	padding-top: 0;
+}
+#left_sidebar ul li ul li {
+	padding-bottom: 0;
+	padding-top: 1px;
+}
